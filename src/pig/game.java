@@ -3,6 +3,7 @@ package pig;
  *
  * @author Jack Eller
  * hopefully the git works...
+ * setting up git
  */
 import java.util.Scanner;
 public class game extends pigDice{

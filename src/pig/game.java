@@ -2,13 +2,16 @@ package pig;
 /**
  *
  * @author Jack Eller
- * hopefully the git works...
- * setting up git
+ * git addon test
+ * this should add to the main branch
  */
 import java.util.Scanner;
 public class game extends pigDice{
     public static void main(String[]args){
         System.out.println("The name of the game is pig, would you like to play? (y/n)");
+        System.out.println("What is your name?");
+        String name = new Scanner(System.in).nextLine();
+        System.out.println("Ok "+name+" let me get the dice set up...");
         String play = new Scanner(System.in).nextLine();
         String playValue;
         String rollValue;
@@ -20,6 +23,7 @@ public class game extends pigDice{
         int AI_finalScore=0;
         pigDice d1 = new pigDice();
         pigDice d2 = new pigDice();
+        System.out.println("Creating dice...");
         playValue=play;
         while(playValue.equalsIgnoreCase("y")&&AI_finalScore<100&&finalScore<100){
             System.out.println("play value is: "+playValue + " AI_fs is: "+ AI_finalScore + " and final score is: " + finalScore);

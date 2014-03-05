@@ -8,10 +8,10 @@ package pig;
 import java.util.Scanner;
 public class game extends pigDice{
     public static void main(String[]args){
-        System.out.println("The name of the game is pig, would you like to play? (y/n)");
         System.out.println("What is your name?");
         String name = new Scanner(System.in).nextLine();
-        System.out.println("Ok "+name+" let me get the dice set up...");
+        System.out.println("Ok "+name+", let me get the dice set up...");
+        System.out.println("The name of the game is pig, would you like to play? (y/n)");
         String play = new Scanner(System.in).nextLine();
         String playValue;
         String rollValue;

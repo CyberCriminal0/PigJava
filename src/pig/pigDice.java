@@ -2,6 +2,7 @@ package pig;
 /**
  *
  * @author Jack Eller
+ * git revision
  */
 public class pigDice {
     int side;

@@ -1,9 +1,8 @@
 package pig;
 /**
- *
  * @author Jack Eller
  * git addon test
- * this should add to the main branch
+ * this should add to the main branch (if i'm any good at using git repos)
  */
 import java.util.Scanner;
 public class game extends pigDice{
@@ -93,5 +92,4 @@ public class game extends pigDice{
        }
     }
     }
-    
     }

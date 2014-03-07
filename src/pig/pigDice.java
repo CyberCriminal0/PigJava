@@ -1,6 +1,5 @@
 package pig;
 /**
- *
  * @author Jack Eller
  * git revision
  */
@@ -53,8 +52,6 @@ public void face(){
         }
         }
         }
-        
-    
 }
     }
 /**rolls once to find the value of the rolls**/

@@ -16,7 +16,7 @@ public class game extends pigDice{
         System.out.println("Do you want to play against an AI, another player, or Caleb? (a/p/c)");
         String p2 = new Scanner(System.in).nextLine();
         if(p2.equalsIgnoreCase("a")){
-            System.out.println("A.I created...");
+            System.out.println("AI created...");
             opponent="A.I";
             player2=1;
         }else if(p2.equalsIgnoreCase("p")){
@@ -25,7 +25,7 @@ public class game extends pigDice{
             System.out.println("Hello "+opponent+",  let's begin...");
             player2=2;
         }else if(p2.equalsIgnoreCase("c")){
-            System.out.println("Launching A.I: Caleb");
+            System.out.println("Launching AI: Caleb");
             opponent="Caleb";
             player2=3;
         }
@@ -42,7 +42,7 @@ public class game extends pigDice{
         System.out.println("Creating dice...");
         playValue=play;
         while(playValue.equalsIgnoreCase("y")&&AI_finalScore<100&&finalScore<100){
-            System.out.println("play value is: "+playValue + " player 2 score is: "+ AI_finalScore + " and player 1 score is: " + finalScore);
+        //System.out.println("play value is: "+playValue + " player 2 score is: "+ AI_finalScore + " and player 1 score is: " + finalScore);
         while(turn==1){
         System.out.println("Roll? (y/n)");
         String roll = new Scanner(System.in).nextLine();
@@ -51,6 +51,7 @@ public class game extends pigDice{
             finalScore=currentScore+finalScore;
             System.out.println("Final Score: "+finalScore); // final score? or current score?
             turn=2;
+            currentScore=0;
         }
         rollValue=roll;
         while(rollValue.equalsIgnoreCase("y")&&turn==1){
@@ -71,18 +72,19 @@ public class game extends pigDice{
             currentScore=0;
         }
         if(turn==1){
-        currentScore = currentScore+roll1+roll2;
+        currentScore += roll1+roll2;
         System.out.println("Current Score is: "+currentScore);
         }
         rollValue="n";
         roll1 = 0;
         roll2 = 0;
-        currentScore=0;
+
     }
         }
        while(turn==2){
-           if(player2==1){
            int rollmax=0;
+           if(player2==1){
+           System.out.println("Changing to AI's turn");
            rollmax=rollmax+((int)(Math.random()*50));
            while(rollmax>currentScore&&turn==2){
            roll1 = 0;
@@ -99,9 +101,10 @@ public class game extends pigDice{
             roll2=0;
             currentScore=0;
            }else{
-           currentScore=currentScore+roll1+roll2;
+           currentScore += roll1+roll2;
            }
            }
+           System.out.println("AI has ended their turn...");
            turn=1;
            currentScore=0;
            }else if(player2==2){
